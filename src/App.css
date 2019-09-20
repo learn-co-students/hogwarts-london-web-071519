@@ -14,6 +14,9 @@
 
 .navWrapper {
   margin-bottom: 2%;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .filterWrapper {
@@ -74,11 +77,11 @@ ul {
 
 
 .pigTile {
-  display: inline;
   background-repeat: no-repeat;
   background-position: center 90%;
   float: left;
   margin: 2%;
+  margin-top: 1%;
   padding: 1%;
   outline: #3B0B0B dotted thick;
   transition: 0.75s;
