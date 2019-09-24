@@ -1,7 +1,7 @@
-import piggy from '../porco.png'
-import React from 'react'
+import piggy from '../porco.png';
+import React from 'react';
 
-const Nav = () => {
+const Nav = (props) => {
 	return (
 		<div className="navWrapper">
 			<span className="headerText">Hogwarts</span>
@@ -10,9 +10,26 @@ const Nav = () => {
 					<img src={piggy} className="App-logo" alt="piggy" />
 				</a>
 			</div>
-			<span className="normalText">A React App for County Fair Hog Fans</span>
-		</div>
-	)
-}
+			<span className="normalText">
+				A React App for County Fair Hog Fans
+			</span>
+			<br />
+			<div>
+				<span>
+					<select
+						onChange={(event) => props.filter(event.target.value)}
+					>
+						<option value="all">All</option>
+						<option value="greased">Greased</option>
+					</select>
+				</span>
+				<span>Sort By: </span>
 
-export default Nav
+				<span onClick={() => props.sort('name')}>Name | </span>
+				<span onClick={() => props.sort('weight')}>Weight</span>
+			</div>
+		</div>
+	);
+};
+
+export default Nav;
